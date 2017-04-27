@@ -257,25 +257,8 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
         Theme.loadResources(context);
         final ActionBarMenuItem ItemAparat;
         ActionBarMenu menu = actionBar.createMenu();
-
-        ItemAparat = menu.addItem(2, R.drawable.contact_green);
-
-        ItemAparat.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-
-                //NotificationCenter.getInstance().postNotificationName(NotificationCenter.closeChats);
-                //presentFragment(new MainActivity());
-
-                //Intent intent = new Intent(getActivity(), HomeActivity.class);
-                Intent myintent = new Intent(context, MainActivity.class);
-                startActivityForResult(myintent, 2);
-
-            }
-        });
-
-
-	    SharedPreferences themePrefs = ApplicationLoader.applicationContext.getSharedPreferences(AndroidUtilities.THEME_PREFS, AndroidUtilities.THEME_PREFS_MODE);
+        
+	SharedPreferences themePrefs = ApplicationLoader.applicationContext.getSharedPreferences(AndroidUtilities.THEME_PREFS, AndroidUtilities.THEME_PREFS_MODE);
         int iconColor = themePrefs.getInt("chatsHeaderIconsColor", 0xffffffff);
         int tColor = themePrefs.getInt("chatsHeaderTitleColor", 0xffffffff);
         avatarImage = new BackupImageView(context);
