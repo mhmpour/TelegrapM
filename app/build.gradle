@@ -70,7 +70,7 @@ android {
         }
     }
 
-    defaultConfig.versionCode = 871
+    defaultConfig.versionCode = 8711
 
     defaultConfig.manifestPlaceholders = [HOCKEYAPP_APP_ID: ""]
 
